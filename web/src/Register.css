@@ -1,0 +1,530 @@
+/* ============================================================
+   Register Page — Premium UI (Multi-Step Wizard)
+   ============================================================ */
+
+/* ---------- full-viewport wrapper (same as login) ---------- */
+.register-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1F2139 0%, #2C2E52 50%, #252745 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- glassmorphism card (wider for form) ---------- */
+.register-card {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 44px 44px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------- back button ---------- */
+.register-card__back {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    z-index: 11;
+    padding: 0;
+    line-height: 1;
+}
+
+.register-card__back:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+}
+
+/* ---------- logo ---------- */
+.register-card__logo {
+    max-height: 76px;
+    max-width: 220px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+/* ---------- heading ---------- */
+.register-card__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px;
+}
+
+/* ---------- subtitle (step name) ---------- */
+.register-card__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 28px;
+}
+
+/* ============================================================
+   Step Indicator
+   ============================================================ */
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.step-indicator__circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+    transition: all 0.35s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.step-indicator__circle--active {
+    border-color: #E91E63;
+    background: linear-gradient(135deg, #D91B5C, #E91E63);
+    color: #ffffff;
+    box-shadow: 0 0 16px rgba(217, 27, 92, 0.4);
+}
+
+.step-indicator__circle--completed {
+    border-color: #00D9FF;
+    background: #00D9FF;
+    color: #1F2139;
+}
+
+.step-indicator__line {
+    flex: 1;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 8px;
+    transition: background 0.35s ease;
+}
+
+.step-indicator__line--completed {
+    background: #00D9FF;
+}
+
+/* ============================================================
+   Form + Steps
+   ============================================================ */
+
+.register-card__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container that clips the sliding panels */
+.register-card__steps {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Individual step panel */
+.register-card__step {
+    display: none;
+    flex-direction: column;
+    animation: fadeSlideIn 0.35s ease forwards;
+}
+
+.register-card__step--active {
+    display: flex;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------- field group ---------- */
+.register-card__field {
+    margin-bottom: 18px;
+}
+
+/* ---------- label ---------- */
+.register-card__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+}
+
+/* ---------- input ---------- */
+.register-card__input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #1F2139;
+    outline: none;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.register-card__input::placeholder {
+    color: #9CA3AF;
+}
+
+.register-card__input:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* ---------- input error state ---------- */
+.register-card__input--error {
+    border-color: #E91E63;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2);
+}
+
+/* ---------- error message ---------- */
+.register-card__error {
+    font-size: 13px;
+    color: #E91E63;
+    margin: 6px 0 0;
+    line-height: 1.4;
+}
+
+/* ---------- password strength rules ---------- */
+.register-card__pw-rules {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.register-card__pw-rule {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+    transition: color 0.2s ease;
+}
+
+.register-card__pw-rule--pass {
+    color: #00D9FF;
+}
+
+.register-card__pw-rule-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.2s ease;
+}
+
+.register-card__pw-rule--pass .register-card__pw-rule-icon {
+    background: rgba(0, 217, 255, 0.15);
+    color: #00D9FF;
+}
+
+/* ---------- 2-column grid for address step ---------- */
+.register-card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+}
+
+.register-card__grid .register-card__field--full {
+    grid-column: 1 / -1;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.register-card__buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* Primary (Next / Register) */
+.register-card__btn-primary {
+    flex: 1;
+    height: 52px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #D91B5C, #E91E63);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: filter 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(217, 27, 92, 0.35);
+}
+
+.register-card__btn-primary:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 6px 20px rgba(217, 27, 92, 0.45);
+}
+
+.register-card__btn-primary:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+}
+
+/* Secondary (Back) */
+.register-card__btn-secondary {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.register-card__btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ---------- login link ---------- */
+.register-card__login {
+    margin-top: 22px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+}
+
+.register-card__login-link {
+    color: #00D9FF;
+    cursor: pointer;
+    font-weight: 500;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.register-card__login-link:hover {
+    color: #33e4ff;
+    text-decoration: underline;
+}
+
+/* ============================================================
+   Reuse decorative shapes from Login (same classes)
+   ============================================================ */
+
+.reg-shape {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.reg-shape--magenta {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, #D91B5C, #FF1B8D);
+    top: 15%;
+    right: -60px;
+    border-radius: 42% 58% 62% 38% / 46% 52% 48% 54%;
+    opacity: 0.85;
+    animation: reg-float-1 8s ease-in-out infinite;
+}
+
+.reg-shape--cyan-1 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #06B6D4, #00D9FF);
+    bottom: 8%;
+    right: 10%;
+    border-radius: 58% 42% 38% 62% / 52% 46% 54% 48%;
+    opacity: 0.75;
+    animation: reg-float-2 10s ease-in-out infinite;
+}
+
+.reg-shape--cyan-2 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(160deg, #00D9FF, #06B6D4);
+    top: 8%;
+    left: 12%;
+    border-radius: 52% 48% 44% 56% / 60% 40% 60% 40%;
+    opacity: 0.6;
+    animation: reg-float-3 7s ease-in-out infinite;
+}
+
+.reg-shape--lime-1 {
+    width: 160px;
+    height: 80px;
+    background: linear-gradient(135deg, #CAFF00, #A4D600);
+    top: 40%;
+    left: -40px;
+    border-radius: 8px 80px 80px 8px / 50%;
+    opacity: 0.8;
+    animation: reg-float-4 9s ease-in-out infinite;
+}
+
+.reg-shape--lime-2 {
+    width: 140px;
+    height: 70px;
+    background: linear-gradient(135deg, #A4D600, #CAFF00);
+    top: 50%;
+    left: -20px;
+    border-radius: 8px 80px 80px 8px / 50%;
+    opacity: 0.65;
+    animation: reg-float-4 9s ease-in-out infinite 1s;
+}
+
+.reg-shape--blue {
+    width: 220px;
+    height: 140px;
+    background: linear-gradient(135deg, #3B82F6, #6366F1);
+    bottom: -30px;
+    left: 5%;
+    border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+    opacity: 0.5;
+    animation: reg-float-2 11s ease-in-out infinite 0.5s;
+}
+
+@keyframes reg-float-1 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-24px) rotate(6deg);
+    }
+}
+
+@keyframes reg-float-2 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(18px) rotate(-4deg);
+    }
+}
+
+@keyframes reg-float-3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(12px, -16px) rotate(8deg);
+    }
+}
+
+@keyframes reg-float-4 {
+
+    0%,
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(14px) rotate(-3deg);
+    }
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 560px) {
+    .register-card {
+        margin: 16px;
+        padding: 32px 20px 36px;
+        border-radius: 20px;
+    }
+
+    .register-card__title {
+        font-size: 24px;
+    }
+
+    .register-card__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .register-card__btn-secondary {
+        width: 80px;
+    }
+
+    .reg-shape--magenta,
+    .reg-shape--blue,
+    .reg-shape--lime-2 {
+        display: none;
+    }
+
+    .reg-shape--cyan-1,
+    .reg-shape--cyan-2,
+    .reg-shape--lime-1 {
+        opacity: 0.35;
+        transform: scale(0.6);
+    }
+}
