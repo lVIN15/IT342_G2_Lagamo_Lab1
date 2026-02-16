@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MiniApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_light</item>
+        <item name="colorOnPrimary">@color/text_white</item>
+
+        <!-- Secondary = Accent Cyan -->
+        <item name="colorSecondary">@color/accent_cyan</item>
+        <item name="colorSecondaryVariant">@color/accent_cyan_dark</item>
+        <item name="colorOnSecondary">@color/bg_dark_start</item>
+
+        <!-- Background -->
+        <item name="android:colorBackground">@color/bg_dark_start</item>
+        <item name="colorSurface">@color/card_bg_solid</item>
+        <item name="colorOnSurface">@color/text_white</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/bg_dark_start</item>
+        <item name="android:navigationBarColor">@color/bg_dark_start</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/error_red</item>
+        <item name="colorOnError">@color/text_white</item>
+    </style>
+
+</resources>

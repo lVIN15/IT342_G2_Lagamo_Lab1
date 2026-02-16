@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mini App</string>
+
+    <!-- Landing -->
+    <string name="welcome_title">Welcome to Mini App</string>
+    <string name="welcome_subtitle">Secure User Registration &amp; Authentication System</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+
+    <!-- Login -->
+    <string name="login_title">Login</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="hint_email">username@email.com</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_in">Sign in</string>
+    <string name="no_account">Don\'t have an account yet?</string>
+    <string name="register_free">Register for free</string>
+
+    <!-- Register -->
+    <string name="register_title">Create Account</string>
+    <string name="step_personal">Personal Info</string>
+    <string name="step_address">Address</string>
+    <string name="step_credentials">Credentials</string>
+
+    <string name="label_firstname">First Name</string>
+    <string name="label_middlename">Middle Name</string>
+    <string name="label_lastname">Last Name</string>
+    <string name="label_street">Street</string>
+    <string name="label_barangay">Barangay</string>
+    <string name="label_municipality">Municipality</string>
+    <string name="label_province">Province</string>
+    <string name="label_country">Country</string>
+    <string name="label_contact">Contact Number</string>
+    <string name="label_confirm_password">Confirm Password</string>
+
+    <string name="hint_firstname">Juan</string>
+    <string name="hint_middlename">Santos</string>
+    <string name="hint_lastname">Dela Cruz</string>
+    <string name="hint_street">123 Main St.</string>
+    <string name="hint_barangay">Barangay</string>
+    <string name="hint_municipality">Municipality</string>
+    <string name="hint_province">Province</string>
+    <string name="hint_country">Philippines</string>
+    <string name="hint_contact">+63 912 345 6789</string>
+    <string name="hint_create_password">Create a strong password</string>
+    <string name="hint_confirm_password">Re-enter your password</string>
+
+    <string name="btn_next">Next</string>
+    <string name="btn_back">Back</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="login_here">Login here</string>
+
+    <!-- Password rules -->
+    <string name="pw_length">At least 8 characters</string>
+    <string name="pw_uppercase">One uppercase letter (A-Z)</string>
+    <string name="pw_lowercase">One lowercase letter (a-z)</string>
+    <string name="pw_number">One number (0–9)</string>
+    <string name="pw_special">One special character (!@#$…)</string>
+
+    <!-- Dashboard -->
+    <string name="loading_profile">Loading profile…</string>
+    <string name="status_active">Active</string>
+    <string name="label_contact_info">Contact</string>
+    <string name="label_address">Address</string>
+    <string name="btn_logout">Logout</string>
+    <string name="dash_placeholder">—</string>
+
+    <!-- Logout modal -->
+    <string name="logout_title">Logout</string>
+    <string name="logout_message">Are you sure you want to logout?\nYou\'ll need to sign in again to access your profile.</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_yes_logout">Yes, Logout</string>
+
+    <!-- Toast messages -->
+    <string name="toast_login_success">Login successful!</string>
+    <string name="toast_login_error">Invalid credentials. Please try again.</string>
+    <string name="toast_register_success">Registration successful! Please login.</string>
+    <string name="toast_register_error">Registration failed. Email might be taken.</string>
+    <string name="toast_logout_success">You have been logged out successfully</string>
+    <string name="toast_network_error">Network error. Please check your connection.</string>
+    <string name="toast_password_mismatch">Passwords do not match</string>
+    <string name="toast_password_weak">Password does not meet all requirements</string>
+</resources>

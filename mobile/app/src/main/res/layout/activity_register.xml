@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:layout_gravity="center">
+
+        <!-- ======== Glassmorphism Card ======== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_card"
+            android:elevation="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="32dp"
+            android:paddingTop="44dp"
+            android:paddingBottom="36dp">
+
+            <!-- Back button -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:layout_marginStart="-8dp"
+                android:layout_marginBottom="8dp">
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_back_button"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Back"
+                    android:tint="@color/text_white_70" />
+            </FrameLayout>
+
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginBottom="12dp"
+                android:src="@mipmap/ic_launcher_round"
+                android:contentDescription="App Logo" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_title"
+                android:textColor="@color/text_white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Step subtitle -->
+            <TextView
+                android:id="@+id/txt_step_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_personal"
+                android:textColor="@color/text_white_60"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- ======== Step Indicator ======== -->
+            <LinearLayout
+                android:id="@+id/step_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="28dp">
+
+                <!-- Step 1 circle -->
+                <TextView
+                    android:id="@+id/step_circle_1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_step_active"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Line 1-2 -->
+                <View
+                    android:id="@+id/step_line_1"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@color/step_line_inactive" />
+
+                <!-- Step 2 circle -->
+                <TextView
+                    android:id="@+id/step_circle_2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_step_inactive"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/text_white_40"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Line 2-3 -->
+                <View
+                    android:id="@+id/step_line_2"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@color/step_line_inactive" />
+
+                <!-- Step 3 circle -->
+                <TextView
+                    android:id="@+id/step_circle_3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_step_inactive"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/text_white_40"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- ======== STEP 1 — Personal Info ======== -->
+            <LinearLayout
+                android:id="@+id/step1_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_firstname" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_firstname"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_firstname"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="textPersonName"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_middlename" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_middlename"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_middlename"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="textPersonName"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_lastname" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_lastname"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_lastname"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="textPersonName"
+                    android:paddingHorizontal="14dp" android:singleLine="true" />
+            </LinearLayout>
+
+            <!-- ======== STEP 2 — Address ======== -->
+            <LinearLayout
+                android:id="@+id/step2_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_street" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_street"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_street"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="textPostalAddress"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_barangay" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_barangay"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_barangay"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="text"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_municipality" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_municipality"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_municipality"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="text"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_province" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_province"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_province"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="text"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_country" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_country"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_country"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="text"
+                    android:paddingHorizontal="14dp" android:singleLine="true" />
+            </LinearLayout>
+
+            <!-- ======== STEP 3 — Credentials ======== -->
+            <LinearLayout
+                android:id="@+id/step3_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_contact" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_contact"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_contact"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="phone"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_email" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_email"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_email"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="textEmailAddress"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="16dp"
+                    android:singleLine="true" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_password" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_password"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_create_password"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="textPassword"
+                    android:paddingHorizontal="14dp" android:singleLine="true" />
+
+                <!-- Password strength rules -->
+                <LinearLayout
+                    android:id="@+id/pw_rules_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone">
+
+                    <TextView android:id="@+id/pw_rule_length"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="  ✗  At least 8 characters" android:textSize="12sp"
+                        android:textColor="@color/pw_rule_fail" android:layout_marginBottom="4dp" />
+                    <TextView android:id="@+id/pw_rule_upper"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="  ✗  One uppercase letter (A-Z)" android:textSize="12sp"
+                        android:textColor="@color/pw_rule_fail" android:layout_marginBottom="4dp" />
+                    <TextView android:id="@+id/pw_rule_lower"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="  ✗  One lowercase letter (a-z)" android:textSize="12sp"
+                        android:textColor="@color/pw_rule_fail" android:layout_marginBottom="4dp" />
+                    <TextView android:id="@+id/pw_rule_number"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="  ✗  One number (0–9)" android:textSize="12sp"
+                        android:textColor="@color/pw_rule_fail" android:layout_marginBottom="4dp" />
+                    <TextView android:id="@+id/pw_rule_special"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="  ✗  One special character (!@#$…)" android:textSize="12sp"
+                        android:textColor="@color/pw_rule_fail" />
+                </LinearLayout>
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/label_confirm_password" android:textColor="@color/text_white_90"
+                    android:textSize="14sp" android:layout_marginBottom="8dp" />
+                <EditText android:id="@+id/input_confirm_password"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input" android:hint="@string/hint_confirm_password"
+                    android:textColorHint="@color/input_hint" android:textColor="@color/input_text"
+                    android:textSize="14sp" android:inputType="textPassword"
+                    android:paddingHorizontal="14dp" android:singleLine="true" />
+            </LinearLayout>
+
+            <!-- ======== Buttons (Back / Next / Register) ======== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btn_back_step"
+                    android:layout_width="100dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_button_ghost"
+                    android:text="@string/btn_back"
+                    android:textColor="@color/text_white_90"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:stateListAnimator="@null"
+                    android:visibility="gone"
+                    android:layout_marginEnd="12dp" />
+
+                <Button
+                    android:id="@+id/btn_next_step"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_primary"
+                    android:text="@string/btn_next"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:letterSpacing="0.02"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+
+            <!-- Login link -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_account"
+                    android:textColor="@color/text_white_65"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/link_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_here"
+                    android:textColor="@color/accent_cyan"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingStart="4dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

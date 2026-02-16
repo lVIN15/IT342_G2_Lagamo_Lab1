@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================================
+         Color Palette — matches web app CSS
+         ============================================================ -->
+
+    <!-- Background gradient colors -->
+    <color name="bg_dark_start">#FF1F2139</color>
+    <color name="bg_dark_mid">#FF2C2E52</color>
+    <color name="bg_dark_end">#FF252745</color>
+
+    <!-- Primary (magenta) -->
+    <color name="primary">#FFD91B5C</color>
+    <color name="primary_light">#FFE91E63</color>
+    <color name="primary_shadow">#59D91B5C</color>
+
+    <!-- Accent / Cyan -->
+    <color name="accent_cyan">#FF00D9FF</color>
+    <color name="accent_cyan_dark">#FF06B6D4</color>
+    <color name="accent_cyan_bg">#1F00D9FF</color>
+
+    <!-- Card / Glass -->
+    <color name="card_bg">#0FFFFFFF</color>
+    <color name="card_border">#2EFFFFFF</color>
+    <color name="card_bg_solid">#FF232541</color>
+
+    <!-- Input -->
+    <color name="input_bg">#FFFFFFFF</color>
+    <color name="input_text">#FF1F2139</color>
+    <color name="input_hint">#FF9CA3AF</color>
+    <color name="input_border">#14000000</color>
+    <color name="input_focus_border">#FF3B82F6</color>
+
+    <!-- Text -->
+    <color name="text_white">#FFFFFFFF</color>
+    <color name="text_white_90">#E6FFFFFF</color>
+    <color name="text_white_70">#B3FFFFFF</color>
+    <color name="text_white_65">#A6FFFFFF</color>
+    <color name="text_white_60">#99FFFFFF</color>
+    <color name="text_white_55">#8CFFFFFF</color>
+    <color name="text_white_50">#80FFFFFF</color>
+    <color name="text_white_45">#73FFFFFF</color>
+    <color name="text_white_40">#66FFFFFF</color>
+    <color name="text_white_25">#40FFFFFF</color>
+    <color name="text_white_20">#33FFFFFF</color>
+
+    <!-- Button ghost -->
+    <color name="ghost_bg">#14FFFFFF</color>
+    <color name="ghost_border">#40FFFFFF</color>
+
+    <!-- Decorative shape colors -->
+    <color name="shape_magenta">#FFD91B5C</color>
+    <color name="shape_cyan">#FF06B6D4</color>
+    <color name="shape_lime">#FFCAFF00</color>
+    <color name="shape_blue">#FF3B82F6</color>
+
+    <!-- Toast colors -->
+    <color name="toast_success_border">#4000D9FF</color>
+    <color name="toast_success_text">#FF00D9FF</color>
+    <color name="toast_success_icon_bg">#2600D9FF</color>
+    <color name="toast_error_border">#4DE91E63</color>
+    <color name="toast_error_text">#FFE91E63</color>
+    <color name="toast_error_icon_bg">#26E91E63</color>
+    <color name="toast_bg">#F2232541</color>
+
+    <!-- Modal overlay -->
+    <color name="modal_overlay">#B30F0F1E</color>
+    <color name="modal_bg">#F2232541</color>
+
+    <!-- Status badge -->
+    <color name="status_bg">#1F00D9FF</color>
+    <color name="status_dot">#FF00D9FF</color>
+
+    <!-- Step indicator -->
+    <color name="step_inactive_border">#33FFFFFF</color>
+    <color name="step_completed_bg">#FF00D9FF</color>
+    <color name="step_line_inactive">#26FFFFFF</color>
+    <color name="step_line_completed">#FF00D9FF</color>
+
+    <!-- Password rule colors -->
+    <color name="pw_rule_pass">#FF00D9FF</color>
+    <color name="pw_rule_fail">#73FFFFFF</color>
+
+    <!-- Error -->
+    <color name="error_red">#FFE91E63</color>
+</resources>
