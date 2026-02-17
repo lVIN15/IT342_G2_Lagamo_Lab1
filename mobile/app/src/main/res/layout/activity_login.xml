@@ -20,34 +20,39 @@
             android:elevation="8dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false"
             android:paddingHorizontal="36dp"
-            android:paddingTop="48dp"
+            android:paddingTop="32dp"
             android:paddingBottom="40dp">
 
             <!-- Back button -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-24dp"
+                android:layout_marginTop="-18dp"
                 android:layout_marginStart="-12dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <ImageButton
                     android:id="@+id/btn_back"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="@drawable/bg_back_button"
-                    android:src="@android:drawable/ic_menu_revert"
+                    android:src="@drawable/ic_arrow_back"
                     android:scaleType="centerInside"
-                    android:contentDescription="Back"
-                    android:tint="@color/text_white_70" />
+                    android:padding="10dp"
+                    android:elevation="12dp"
+                    android:contentDescription="Back" />
             </FrameLayout>
 
             <!-- Logo -->
             <ImageView
-                android:layout_width="76dp"
-                android:layout_height="76dp"
-                android:layout_marginBottom="16dp"
-                android:src="@mipmap/ic_launcher_round"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/miniapplogo"
                 android:contentDescription="App Logo" />
 
             <!-- Title -->
@@ -58,7 +63,7 @@
                 android:textColor="@color/text_white"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="28dp" />
+                android:layout_marginBottom="15dp" />
 
             <!-- Email Label -->
             <TextView
