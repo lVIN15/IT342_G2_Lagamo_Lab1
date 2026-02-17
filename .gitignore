@@ -1,0 +1,27 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Gradle
+.gradle/
+build/
+local.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Mobile build
+mobile/.gradle/
+mobile/.idea/
+mobile/app/build/
+mobile/local.properties
+mobile/mobile.iml
+
+# Backend build
+backend/target/
+backend/.mvn/
+
+# Node
+web/node_modules/
