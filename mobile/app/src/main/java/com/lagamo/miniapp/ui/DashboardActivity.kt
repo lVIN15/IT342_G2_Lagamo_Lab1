@@ -120,7 +120,7 @@ class DashboardActivity : AppCompatActivity() {
     private fun showLogoutDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_logout, null)
 
-        val dialog = AlertDialog.Builder(this, R.style.Theme_MiniApp)
+        val dialog = AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_NoActionBar)
             .setView(dialogView)
             .setCancelable(true)
             .create()
@@ -138,6 +138,14 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         dialog.show()
+
+        // Center the dialog and set proper width
+        dialog.window?.let { window ->
+            window.setGravity(android.view.Gravity.CENTER)
+            val displayMetrics = resources.displayMetrics
+            val width = (displayMetrics.widthPixels * 0.85).toInt()
+            window.setLayout(width, android.view.WindowManager.LayoutParams.WRAP_CONTENT)
+        }
     }
 
     private fun performLogout() {
