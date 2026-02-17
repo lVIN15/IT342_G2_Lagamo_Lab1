@@ -18,8 +18,12 @@
 - [x] **Mobile:** Initialize Android/iOS Project (Session 2)
 - [x] **Mobile:** Implement Login & Registration Screens (Session 2)
 - [x] **Mobile:** Implement API Consumption (Session 2)
+- [x] **Mobile:** UI Polish (Custom App Logo, Adaptive Icons, Back Button Visibility, Centered Dialogs) — commits: fc4abfd, 6311653, 7d4ae7f
+- [x] **Backend:** Enhanced Error Handling (Structured JSON Responses for improved client feedback) — commit: 61f6ce2
+- [x] **Project:** DevOps & Network Config (Physical Device Support via `adb reverse`, Git Secret Cleanup) — commit: 75aa987
+- [x] **Docs:** Insert final screenshots into FRS PDF — commit: 9723b6c
 
 ## IN-PROGRESS
-- [ ] **Docs:** Insert final screenshots into FRS PDF (Pending final UI verification)
+
 
 ## TODO
