@@ -19,5 +19,5 @@ package com.lagamo.miniapp.network
 object ApiConstants {
 
     // ✏️  Change this to your backend's public URL
-    const val BASE_URL = "http://10.0.2.2:8080/"
+    const val BASE_URL = "http://localhost:8080/"
 }
