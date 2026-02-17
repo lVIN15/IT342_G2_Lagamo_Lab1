@@ -15,9 +15,9 @@
 - [x] **Web:** Custom CSS styling for Login, Register, Dashboard, and Landing pages — commits: fd2acc8, c216c23, 26d5bb4, dca0ff1
 - [x] **Web:** Implement toast notifications for success/error messages — commits: 73d589e, 404c2fe
 - [x] **Web:** Dashboard user profile display with JWT authentication — commit: 695c6e2
-- [x] **Mobile:** Initialize Android/iOS Project (Session 2)
-- [x] **Mobile:** Implement Login & Registration Screens (Session 2)
-- [x] **Mobile:** Implement API Consumption (Session 2)
+- [x] **Mobile:** Initialize Android/iOS Project (Session 2) — commit: 85c92d9
+- [x] **Mobile:** Implement Login & Registration Screens (Session 2) — commit: 85c92d9
+- [x] **Mobile:** Implement API Consumption (Session 2) — commit: 85c92d9
 - [x] **Mobile:** UI Polish (Custom App Logo, Adaptive Icons, Back Button Visibility, Centered Dialogs) — commits: fc4abfd, 6311653, 7d4ae7f
 - [x] **Backend:** Enhanced Error Handling (Structured JSON Responses for improved client feedback) — commit: 61f6ce2
 - [x] **Project:** DevOps & Network Config (Physical Device Support via `adb reverse`, Git Secret Cleanup) — commit: 75aa987
