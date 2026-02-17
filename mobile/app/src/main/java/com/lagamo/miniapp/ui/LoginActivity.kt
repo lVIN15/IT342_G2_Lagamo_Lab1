@@ -88,7 +88,7 @@ class LoginActivity : AppCompatActivity() {
             }.onFailure { error ->
                 btnSignIn.isEnabled = true
                 btnSignIn.text = getString(R.string.btn_sign_in)
-                ToastHelper.showError(this@LoginActivity, getString(R.string.toast_login_error))
+                ToastHelper.showError(this@LoginActivity, error.message ?: getString(R.string.toast_login_error))
             }
         }
     }

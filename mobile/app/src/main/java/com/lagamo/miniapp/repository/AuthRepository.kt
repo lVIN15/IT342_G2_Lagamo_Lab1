@@ -24,8 +24,9 @@ class AuthRepository(private val tokenManager: TokenManager) {
             if (response.isSuccessful) {
                 Result.success(Unit)
             } else {
-                val errorBody = response.errorBody()?.string() ?: "Registration failed"
-                Result.failure(Exception(errorBody))
+                val errorBody = response.errorBody()?.string()
+                val message = parseError(errorBody, "Registration failed")
+                Result.failure(Exception(message))
             }
         } catch (e: Exception) {
             Result.failure(e)
@@ -48,11 +49,25 @@ class AuthRepository(private val tokenManager: TokenManager) {
                     Result.failure(Exception("Empty token received"))
                 }
             } else {
-                val errorBody = response.errorBody()?.string() ?: "Invalid credentials"
-                Result.failure(Exception(errorBody))
+                val errorBody = response.errorBody()?.string()
+                val message = parseError(errorBody, "Invalid credentials")
+                Result.failure(Exception(message))
             }
         } catch (e: Exception) {
             Result.failure(e)
+        }
+    }
+
+    private fun parseError(errorBody: String?, defaultMsg: String): String {
+        return try {
+            if (errorBody != null) {
+                val json = org.json.JSONObject(errorBody)
+                json.getString("message")
+            } else {
+                defaultMsg
+            }
+        } catch (e: Exception) {
+            errorBody ?: defaultMsg
         }
     }
 

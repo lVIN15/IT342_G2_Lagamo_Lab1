@@ -23,7 +23,11 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody User user) {
-        return ResponseEntity.ok(authService.registerUser(user));
+        try {
+            return ResponseEntity.ok(authService.registerUser(user));
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(new ErrorResponse(e.getMessage()));
+        }
     }
 
     @PostMapping("/login")
@@ -35,7 +39,7 @@ public class AuthController {
             // Return it as a JSON object
             return ResponseEntity.ok(new AuthResponse(token));
         } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
+            return ResponseEntity.badRequest().body(new ErrorResponse(e.getMessage()));
         }
     }
 
@@ -62,12 +66,11 @@ public class AuthController {
             profile.put("country", user.getCountry());
             return ResponseEntity.ok(profile);
         } catch (Exception e) {
-            return ResponseEntity.status(401).body("Invalid or expired token");
+            return ResponseEntity.status(401).body(new ErrorResponse("Invalid or expired token"));
         }
     }
 
-    // Tiny helper class to make the JSON look like: { "token": "..." }
-    // You can put this at the bottom of AuthController.java
+    // Helper class for successful login response
     static class AuthResponse {
         private String token;
 
@@ -77,6 +80,19 @@ public class AuthController {
 
         public String getToken() {
             return token;
+        }
+    }
+
+    // Helper class for error responses
+    static class ErrorResponse {
+        private String message;
+
+        public ErrorResponse(String message) {
+            this.message = message;
+        }
+
+        public String getMessage() {
+            return message;
         }
     }
 }

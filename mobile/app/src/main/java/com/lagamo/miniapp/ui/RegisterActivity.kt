@@ -291,10 +291,10 @@ class RegisterActivity : AppCompatActivity() {
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(intent)
                 finish()
-            }.onFailure {
+            }.onFailure { e ->
                 btnNext.isEnabled = true
                 btnNext.text = getString(R.string.btn_register)
-                ToastHelper.showError(this@RegisterActivity, getString(R.string.toast_register_error))
+                ToastHelper.showError(this@RegisterActivity, e.message ?: getString(R.string.toast_register_error))
             }
         }
     }

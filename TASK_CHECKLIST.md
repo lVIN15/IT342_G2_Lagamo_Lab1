@@ -23,6 +23,3 @@
 - [ ] **Docs:** Insert final screenshots into FRS PDF (Pending final UI verification)
 
 ## TODO
-- [ ] **Mobile:** Initialize Android/iOS Project (Session 2)
-- [ ] **Mobile:** Implement Login & Registration Screens (Session 2)
-- [ ] **Mobile:** Implement API Consumption (Session 2)
